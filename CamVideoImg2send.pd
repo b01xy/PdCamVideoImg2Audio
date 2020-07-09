@@ -1,4 +1,4 @@
-#N canvas 1 56 1918 999 10;
+#N canvas 6 56 1908 994 10;
 #X obj -2 1 cnv 15 1280 1024 empty empty Motion-Capture2audio_video
 20 12 0 14 -1 -128992 0;
 #X obj 4 27 cnv 15 1240 460 empty empty empty 20 12 0 14 -66577 -66577
@@ -761,7 +761,7 @@
 #X restore 353 662 pd senVal2cursor;
 #X floatatom 294 324 5 0 100 2 - - -;
 #X obj 294 234 vsl 17 80 0 100 0 0 empty empty Thresold 0 -8 0 8 -228992
--258699 -1 0 1;
+-258699 -1 1343 1;
 #X msg 294 201 17;
 #X obj 539 110 pix_rgba;
 #X obj 203 757 color;
@@ -873,7 +873,7 @@
 #X obj 346 313 vsl 8 50 0 1 0 0 empty empty empty 0 -8 0 8 -24198 -1
 -1 4900 1;
 #X obj 354 313 vsl 8 50 0 1 0 0 empty empty empty 0 -8 0 8 -355 -1
--1 0 1;
+-1 4900 1;
 #N canvas 0 0 460 310 color 0;
 #X obj 44 212 pack f f f f;
 #X msg 44 236 \$1 \$2 \$3 \$4;
@@ -885,7 +885,7 @@
 #X obj 49 35 vsl 8 50 0 1 0 0 empty empty empty 0 -8 0 8 -24198 -1
 -1 4900 1;
 #X obj 57 35 vsl 8 50 0 1 0 0 empty empty empty 0 -8 0 8 -355 -1 -1
-0 1;
+4900 1;
 #X obj 65 35 vsl 8 50 0 1 0 0 empty empty empty 0 -8 0 8 -195568 -1
 -1 4900 1;
 #X obj 63 167 t b f;
@@ -1064,7 +1064,7 @@
 #X floatatom 170 177 3 0 100 2 - - -;
 #X obj 112 77 tgl 19 0 empty ib1 Affichage_webcam 0 -6 0 8 -24198 -261689
 -1 1 1;
-#X obj 139 202 tgl 19 0 empty ib0 Alpha 0 -6 0 8 -33289 -262144 -1
+#X obj 139 202 tgl 19 0 empty ib1 Alpha 0 -6 0 8 -33289 -262144 -1
 1 1;
 #X floatatom 167 207 4 0 0 2 Taille - -;
 #X msg 199 207 5.334;
@@ -1164,7 +1164,7 @@
 0;
 #X obj 10 503 cnv 15 390 200 empty empty Affichage_GEM_&_Initialisations
 20 12 0 14 -195568 -66577 0;
-#N canvas 0 22 586 436 initialisations 0;
+#N canvas 6 56 586 436 initialisations 0;
 #X obj 20 -10 loadbang;
 #X obj 235 108 s ib;
 #X obj 156 137 s ib1;
@@ -1221,7 +1221,7 @@
 0;
 #X obj 840 729 cnv 15 400 214 empty empty Lecteur_Image 20 12 0 14
 -233017 -4 0;
-#N canvas 699 219 770 620 Gestion_Affichage 0;
+#N canvas 699 219 770 620 Gestion_Affichage 1;
 #N canvas 928 123 578 758 GemWin_Benj 0;
 #X msg 75 111 create \, 1;
 #X msg 61 54 stereo 2;
@@ -1728,20 +1728,35 @@
 #X msg 254 210 dimen 1920 1080 \, offset 1920 0 \, border 0 \, cursor
 0 \, create \, 1;
 #X connect 1 0 0 0;
+#X connect 2 0 0 0;
+#X connect 3 0 0 0;
+#X connect 4 0 0 0;
+#X connect 5 0 0 0;
+#X connect 6 0 0 0;
 #X connect 7 0 0 0;
+#X connect 8 0 0 0;
+#X connect 9 0 0 0;
 #X connect 10 0 13 0;
 #X connect 11 0 13 1;
 #X connect 12 0 13 2;
+#X connect 14 0 0 0;
+#X connect 15 0 0 0;
+#X connect 17 0 0 0;
 #X connect 18 0 20 0;
 #X connect 19 0 1 0;
 #X connect 19 1 26 0;
 #X connect 19 2 32 0;
 #X connect 20 0 19 0;
 #X connect 20 1 22 0;
+#X connect 21 0 0 0;
 #X connect 22 0 7 0;
 #X connect 22 1 7 0;
+#X connect 23 0 0 0;
+#X connect 25 0 0 0;
 #X connect 26 0 0 0;
 #X connect 28 0 0 0;
+#X connect 29 0 0 0;
+#X connect 30 0 0 0;
 #X connect 31 0 0 0;
 #X connect 32 0 0 0;
 #X connect 34 0 0 0;
@@ -2800,7 +2815,7 @@ as RGB-triplet.;
 #X obj 57 35 vsl 8 50 0 1 0 0 empty empty empty 0 -8 0 8 -355 -1 -1
 4900 1;
 #X obj 65 35 vsl 8 50 0 1 0 0 empty empty empty 0 -8 0 8 -195568 -1
--1 2700 1;
+-1 0 1;
 #X obj 63 167 t b f;
 #X obj 86 189 t b f;
 #X floatatom 77 86 5 0 0 0 - - -;
@@ -2835,7 +2850,7 @@ as RGB-triplet.;
 #X connect 17 0 7 0;
 #X restore 41 100 pd color;
 #X obj 74 30 vsl 8 50 0 1 0 0 empty empty empty 0 -8 0 8 -195568 -1
--1 2700 1;
+-1 0 1;
 #X msg 60 -5 1;
 #X obj 75 18 tgl 10 0 empty empty empty 17 7 0 10 -99865 -262144 -1
 0 1;
@@ -2878,7 +2893,7 @@ as RGB-triplet.;
 #X floatatom 113 24 5 0 0 1 saturation - -;
 #X floatatom 113 45 5 0 0 1 Gain - -;
 #X obj 570 341 gemhead 945;
-#X obj 568 311 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 1
+#X obj 568 311 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
 1;
 #X floatatom -714 565 0 0 0 0 - - -;
 #X msg -731 539 disconnect;
@@ -2955,16 +2970,17 @@ UDP;
 #X obj -634 -83 pix_snap 0 0 800 600;
 #X obj 41 9 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144 -1
 -1;
-#X obj 139 88 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 1
+#X obj 139 88 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
 1;
 #X obj 159 134 sel 0 1;
 #X obj 147 156 loadbang;
-#X obj 259 99 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 1
+#X obj 259 99 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
 1;
 #X floatatom 13 61 0 0 0 0 - - -;
 #X obj 12 41 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144 -1
 -1;
 #X text 9 27 NET;
+#X msg 84 -21 0;
 #X connect 0 1 1 0;
 #X connect 0 2 2 0;
 #X connect 0 3 3 0;
@@ -3107,8 +3123,10 @@ UDP;
 #X connect 146 0 145 0;
 #X connect 147 0 144 0;
 #X connect 148 0 68 0;
-#X connect 149 0 148 0;
-#X connect 149 0 134 0;
+#X connect 149 0 117 0;
+#X connect 149 0 118 0;
+#X connect 149 0 141 0;
+#X connect 149 0 260 0;
 #X connect 150 0 54 0;
 #X connect 151 0 169 0;
 #X connect 152 0 156 0;
@@ -3216,13 +3234,14 @@ UDP;
 #X connect 255 0 246 0;
 #X connect 256 0 180 0;
 #X connect 258 0 220 0;
+#X connect 260 0 142 0;
 #X coords 0 -1 1 1 285 120 1 0 0;
 #X restore 36 790 pd ImagePixAnalys;
 #X obj 320 772 bng 15 250 50 0 empty empty empty 0 -6 0 8 -262144 -1
 -1;
 #X obj 36 765 tgl 19 1 empty empty Gem 0 -6 0 8 -258699 -1 -1 1 1;
 #X obj 36 916 tgl 15 0 empty empty Connected 17 7 0 10 -4034 -1 -1
-0 1;
+1 1;
 #X msg 245 90 0;
 #X msg -55 571 7.1128;
 #X msg 248 208 7.1128;
@@ -3233,7 +3252,7 @@ UDP;
 #X obj 367 36 cnv 15 340 670 empty empty Image_Player 14 12 0 14 -260145
 -4 0;
 #N canvas 6 56 996 722 lecteur_Image 0;
-#X msg 603 430 open \$1;
+#X msg 444 293 open \$1;
 #X floatatom 351 592 0 0 0 0 - - -;
 #X floatatom 371 154 0 0 0 0 - - -;
 #X floatatom 337 153 0 0 0 0 - - -;
@@ -3301,14 +3320,14 @@ UDP;
 #X obj 329 340 tgl 15 0 empty empty empty 0 -6 0 8 -262144 -1 -1 0
 1;
 #X floatatom 400 682 0 0 0 0 - - -;
-#X symbolatom 676 423 35 0 0 0 - - -;
+#X symbolatom 462 209 35 0 0 0 - - -;
 #X floatatom 359 97 0 0 0 0 - - -;
 #X floatatom 331 96 0 0 0 0 - - -;
 #X floatatom 388 97 0 0 0 0 - - -;
 #X obj 303 123 rotateXYZ 0 0 0;
-#X floatatom 359 211 0 0 0 0 - - -;
-#X floatatom 331 210 0 0 0 0 - - -;
-#X floatatom 388 211 0 0 0 0 - - -;
+#X floatatom 617 286 0 0 0 0 - - -;
+#X floatatom 589 285 0 0 0 0 - - -;
+#X floatatom 646 286 0 0 0 0 - - -;
 #X obj 303 237 rotateXYZ 0 0 0;
 #X obj 303 57 gemhead 32;
 #X obj 303 653 pix_texture;
@@ -3321,8 +3340,8 @@ UDP;
 #X obj 304 4 inlet;
 #X obj 428 318 inlet;
 #X msg 428 456 open \$1;
-#X obj 603 322 inlet;
-#X obj 603 375 bng 19 250 50 0 empty empty Open 0 -6 0 8 -24198 -258699
+#X obj 444 185 inlet;
+#X obj 444 238 bng 19 250 50 0 empty empty Open 0 -6 0 8 -24198 -258699
 -1;
 #X obj 360 431 outlet;
 #X obj 750 33 inlet;
@@ -3332,17 +3351,20 @@ UDP;
 #X obj 428 429 t a b;
 #X obj 384 263 loadbang;
 #X obj 303 502 pix_image;
-#X obj 603 406 openpanel;
+#X obj 444 269 openpanel;
 #X obj 303 178 translateXYZ 0 0 0;
 #X msg 351 547 5.334;
 #X msg 566 133 0.5 500;
-#X floatatom 534 229 0 0 0 0 - - -;
-#X floatatom 506 228 0 0 0 0 - - -;
-#X floatatom 562 229 0 0 0 0 - - -;
-#X floatatom 534 256 0 0 0 0 - - -;
-#X floatatom 500 255 0 0 0 0 - - -;
-#X floatatom 569 256 0 0 0 0 - - -;
-#X floatatom 524 373 0 0 0 2 Taill_aff - -;
+#X floatatom 612 234 0 0 0 0 - - -;
+#X floatatom 584 233 0 0 0 0 - - -;
+#X floatatom 640 234 0 0 0 0 - - -;
+#X floatatom 612 261 0 0 0 0 - - -;
+#X floatatom 583 260 0 0 0 0 - - -;
+#X floatatom 647 261 0 0 0 0 - - -;
+#X floatatom 373 381 0 0 0 2 Taill_aff - -;
+#X text 508 235 RotateXYZ;
+#X text 512 287 RotateXYZ;
+#X text 500 260 TranslateXYZ;
 #X connect 0 0 45 0;
 #X connect 1 0 28 1;
 #X connect 1 0 29 0;
@@ -3428,7 +3450,7 @@ red;
 #X obj 517 107 loadbang;
 #X msg 378 88 location /media/Docs/WzAudioLux/MicroBigPhotos;
 #X obj 604 396 metro 500;
-#X obj 604 374 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 1
+#X obj 604 374 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
 1;
 #X obj 604 419 counter 1000;
 #X msg 571 107 font Courier bold 10;
@@ -3519,7 +3541,7 @@ red;
 #X obj 400 640 / 4;
 #X obj 400 660 * 3;
 #X msg 384 287 1;
-#X obj 368 231 tgl 19 0 empty empty Gem 0 -6 0 8 -258699 -1 -1 1 1
+#X obj 368 231 tgl 19 0 empty empty Gem 0 -6 0 8 -258699 -1 -1 0 1
 ;
 #X obj 304 4 inlet;
 #X obj 428 318 inlet;
@@ -3553,7 +3575,7 @@ red;
 -1 -1;
 #X floatatom 501 285 5 0 10000 1 frameNum - -;
 #X msg 443 284 auto \$1;
-#X obj 443 266 tgl 15 0 empty empty Auto 0 -6 0 8 -262144 -1 -1 1 1
+#X obj 443 266 tgl 15 0 empty empty Auto 0 -6 0 8 -262144 -1 -1 0 1
 ;
 #X obj 470 516 unpack 0 0 0 0;
 #X floatatom 468 367 5 0 0 3 fps - -;
@@ -3637,7 +3659,7 @@ red;
 -1;
 #X floatatom 850 436 4 0 0 2 Taille - -;
 #X obj 854 399 r \$0-fini;
-#X obj 728 414 tgl 19 0 empty empty Gem 0 -6 0 8 -258699 -1 -1 1 1
+#X obj 728 414 tgl 19 0 empty empty Gem 0 -6 0 8 -258699 -1 -1 0 1
 ;
 #X obj 854 377 loadbang;
 #X symbolatom 727 354 50 0 0 0 - - -;
@@ -3656,7 +3678,7 @@ red;
 #X obj 960 420 counter 1000;
 #X msg 927 108 font Courier bold 10;
 #X msg 734 89 location /media/Docs/DatamoshedBBB;
-#X obj 85 128 tgl 32 0 empty empty Source 0 -6 0 10 -257665 -1 -1 0
+#X obj 85 128 tgl 32 0 empty empty Source 0 -6 0 10 -257665 -1 -1 1
 1;
 #X connect 5 0 4 6;
 #X connect 6 0 4 7;

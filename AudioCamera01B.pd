@@ -1,4 +1,4 @@
-#N canvas 410 68 1417 796 10;
+#N canvas 388 223 1417 796 10;
 #X obj 0 -8 cnv 15 1524 768 empty empty empty 20 12 0 14 -1 -66577
 0;
 #X obj 2 -6 cnv 15 1520 764 empty empty AudioCamera_-_01xy 20 20 0
@@ -337,7 +337,7 @@
 #X connect 59 0 54 0;
 #X restore 1997 -18 pd midioutput;
 #X obj 32 148 vsl 32 100 0 127 0 0 empty empty empty 0 -9 0 10 -258113
--262144 -1 0 1;
+-262144 -1 6300 1;
 #X msg 172 130 26;
 #X obj 2010 226 osc~ 440;
 #X floatatom 1954 398 10 0 0 1 length_in_seconds - -;
@@ -371,7 +371,7 @@
 0 1;
 #X msg 142 39 30;
 #X obj 557 61 hsl 100 19 0 127 0 0 empty \$0-tone empty -2 -8 0 10
--262130 -258113 -1 0 1;
+-262130 -258113 -1 2600 1;
 #X msg 416 42 64.14;
 #X obj 393 28 bng 15 250 50 0 empty empty 64 17 7 0 10 -159808 -1 -1
 ;
@@ -465,8 +465,8 @@
 #X msg 84 630 19.44 50 48.99;
 #X obj 130 721 t f f f;
 #X floatatom 114 175 5 0 0 0 - - -;
-#X obj 254 181 vsl 15 60 0 6 0 0 empty empty empty 0 -9 0 10 -258113
--262144 -1 0 1;
+#X obj 254 181 vsl 15 60 0 1 0 0 empty empty empty 0 -9 0 10 -258113
+-262144 -1 2360 1;
 #X msg 254 157 0;
 #X floatatom 254 252 5 0 100 0 - - -;
 #X msg 287 157 0.4;
@@ -510,10 +510,10 @@
 #X msg 428 657 19.44 50 48.99;
 #X obj 471 724 t f f f;
 #X obj 458 158 hsl 128 15 0 127 0 0 empty \$0-tone empty -2 -8 0 10
--204786 -258113 -1 0 1;
+-204786 -258113 -1 3335 1;
 #X floatatom 455 178 5 0 0 0 - - -;
-#X obj 595 184 vsl 15 60 0 6 0 0 empty empty empty 0 -9 0 10 -258113
--262144 -1 0 1;
+#X obj 595 184 vsl 15 60 0 1 0 0 empty empty empty 0 -9 0 10 -258113
+-262144 -1 2360 1;
 #X msg 595 160 0;
 #X floatatom 595 255 5 0 100 0 - - -;
 #X msg 628 160 0.4;
@@ -557,8 +557,8 @@
 #X msg 775 682 19.44 50 48.99;
 #X obj 793 726 t f f f;
 #X floatatom 708 182 5 0 0 0 - - -;
-#X obj 848 188 vsl 15 60 0 6 0 0 empty empty empty 0 -9 0 10 -258113
--262144 -1 0 1;
+#X obj 848 188 vsl 15 60 0 1 0 0 empty empty empty 0 -9 0 10 -258113
+-262144 -1 2360 1;
 #X msg 848 164 0;
 #X floatatom 848 259 5 0 100 0 - - -;
 #X msg 881 164 0.4;
@@ -592,9 +592,9 @@
 #X obj 888 870 / 1;
 #X obj 850 726 r modg;
 #X obj 117 155 hsl 128 15 0 127 0 0 empty \$0-tone empty -2 -8 0 10
--261234 -258113 -1 0 1;
+-261234 -258113 -1 3335 1;
 #X obj 711 162 hsl 128 15 0 127 0 0 empty \$0-tone empty -2 -8 0 10
--203904 -258113 -1 0 1;
+-203904 -258113 -1 3335 1;
 #X obj 555 957 tabosc4~ cameraG2;
 #X obj 520 982 tabosc4~ cameraG2;
 #X obj 485 1006 tabosc4~ cameraG2;
@@ -819,18 +819,19 @@
 -1;
 #X text 228 9 Taille buffer audio;
 #N canvas 0 22 450 300 (subpatch) 0;
-#X array cameraR2 2051 float 2;
-#X coords 0 1 2051 -1 350 140 1 0 0;
+#X array cameraR2 1027 float 2;
+#X coords 0 1 1027 -1 350 140 1 0 0;
 #X restore 721 348 graph;
 #N canvas 0 22 450 300 (subpatch) 0;
-#X array cameraG2 2051 float 2;
-#X coords 0 1 2051 -1 350 140 1 0 0;
+#X array cameraG2 1027 float 2;
+#X coords 0 1 1027 -1 350 140 1 0 0;
 #X restore 10 347 graph;
 #N canvas 0 22 450 300 (subpatch) 0;
-#X array cameraB2 2051 float 2;
-#X coords 0 1 2051 -1 350 140 1 0 0;
+#X array cameraB2 1027 float 2;
+#X coords 0 1 1027 -1 350 140 1 0 0;
 #X restore 364 348 graph;
 #X text 947 522 INVERSION DROITE GAUCHE DS BUFFER;
+#X obj 978 127 r ib;
 #X connect 2 0 4 0;
 #X connect 3 0 8 0;
 #X connect 4 0 5 0;
@@ -1337,6 +1338,9 @@
 #X connect 483 0 156 0;
 #X connect 483 0 477 0;
 #X connect 483 0 476 0;
+#X connect 489 0 263 0;
+#X connect 489 0 219 0;
+#X connect 489 0 174 0;
 #X coords 0 -1 1 1 1350 550 1 0 0;
 #X restore 163 196 pd ImgAudioAnalys;
 #X obj 1 761 cnv 15 450 300 empty empty titres 20 12 0 14 -260097 -66577
